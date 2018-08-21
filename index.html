@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+<!--slider-->
+
+  <div class="slideContainer mx-auto">
+    <div class="mySlides w-100">
+      <img src="img/balancoire.jpg" alt="image balancoire">
+      <p class="text-center whiteColor">Une balançoire</p>
+    </div>
+    <div class="mySlides w-100">
+      <img src="img/ponton.jpg" alt="image ponton">
+      <p class="text-center whiteColor">Un ponton</p>
+    </div>
+    <div class="mySlides w-100">
+      <img src="img/tracteur.jpg" alt="image tracteur">
+      <p class="text-center whiteColor">Un tracteur</p>
+    </div>
+    <!-- <div class="mySlides w-100">
+      <img src="img/arbres.jpg" alt="image arbres">
+      <p class="text-center whiteColor">Des arbres</p>
+    </div>
+    <div class="mySlides w-100">
+      <img src="img/centrale.jpg" alt="image centrale">
+      <p class="text-center whiteColor">Une centrale</p>
+    </div> -->
+    <div class="control">
+      <button class="slideButtonLeft" onclick="plusDivs(-1)"><i class="fas fa-angle-left"></i></button>
+      <button class="slideButtonRight" onclick="plusDivs(+1)"><i class="fas fa-angle-right"></i></button>
+      <div class="circlesDiv d-flex justify-content-between">
+        <span class="circle activeDot backgroundWhite" onclick="currentDiv(1)"></span>
+        <span class="circle activeDot backgroundWhite" onclick="currentDiv(2)"></span>
+        <span class="circle activeDot backgroundWhite" onclick="currentDiv(3)"></span>
+      </div>
+    </div>
+  </div>
+
+  <!--Calculatrice-->
+
+  <!-- <div class="calculatrice container col-4">
+
+    <div class="affichage row col-8 offset-2 px-0 text-right"><p class="my-auto">0</p></div>
+    <button class="touch7 col-2 offset-2 text-center"><p class="my-auto">7</p></button>
+    <button class="touch8 col-2 text-center"><p class="my-auto">8</p></button>
+    <button class="touch9 col-2 text-center"><p class="my-auto">9</p></button>
+    <button class="touch/ col-2 text-center"><p class="my-auto">/</p></button>
+    <button class="touch4 col-2 offset-2 text-center"><p class="my-auto">4</p></button>
+    <button class="touch5 col-2 text-center"><p class="my-auto">5</p></button>
+    <button class="touch6 col-2 text-center"><p class="my-auto">6</p></button>
+    <button class="touch* col-2 text-center"><p class="my-auto">*</p></button>
+    <button class="touch1 col-2 offset-2 text-center"><p class="my-auto">1</p></button>
+    <button class="touch2 col-2 text-center"><p class="my-auto">2</p></button>
+    <button class="touch3 col-2 text-center"><p class="my-auto">3</p></button>
+    <button class="touch- col-2 text-center"><p class="my-auto">-</p></button>
+    <button class="touch0 col-2 offset-2 text-center"><p class="my-auto">0</p></button>
+    <button class="touch. col-2 text-center"><p class="my-auto">.</p></button>
+    <button class="touch= col-2 text-center"><p class="my-auto">=</p></button>
+    <button class="touch+ col-2 text-center"><p class="my-auto">+</p></button>
+
+  </div> -->
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
