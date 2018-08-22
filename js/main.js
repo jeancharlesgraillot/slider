@@ -1,29 +1,30 @@
 var i;
 var x = document.getElementsByClassName("mySlides");
-var dots = document.getElementsByClassName("activeDot");
+var dots = document.getElementsByClassName("circle");
 var slideIndex = 1;
 showDivs(slideIndex);
 
-//Ajoute ou retranche 1 a slideIndex
+
 function plusDivs(n) {
     showDivs(slideIndex += n);
-}
+}//Ajoute ou retranche 1 a slideIndex lors du clic sur les flèches
 
-//cache tous les éléments mySlides et affiche l'élément avec le slideIndex donné
+//Montre ou cache les images du slider
 function showDivs(n) {
     if (n > x.length) {slideIndex = 1}
     if (n < 1) {slideIndex = x.length} ;
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
-    }
+    }//Gère la boucle de défilement des images et cache les divs mySlides
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace("backgroundWhite", "");
-    }
+    }//Enlève la classe de colorisation de la puce par défaut
     x[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " backgroundWhite";
-
+    //Colore la puce associée à l'image associée
 }
 
+//Gère le défilement automatique du carousel et la colorisation des puces en fonction
 function carousel() {
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
@@ -37,83 +38,15 @@ function carousel() {
     dots[slideIndex-1].className += " backgroundWhite";
 }
 
-setInterval(carousel, 5000);
+setInterval(carousel, 5000); //Détermine la durée d'affichage d'une image
 
+//Associe les puces avec les images par clic
 function currentDiv(n) {
   showDivs(slideIndex = n);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var myIndex = 1;
-// carousel(myIndex);
-//
-// function plusDivs(n) {
-//     carousel(myIndex += n);
-//     clearInterval(slide);
-//     slide = setInterval(carousel, 2000);
-// }
-//
-// function currentDiv(n) {
-//   carousel(myIndex);
-// }
-//
-// function carousel(n) {
-//     var i;
-//     var x = document.getElementsByClassName("mySlides");
-//     for (i = 0; i < x.length; i++) {
-//        x[i].style.display = "none";
-//     }
-//     myIndex++;
-//     if (myIndex > x.length) {myIndex = 1}
-//     x[myIndex-1].style.display = "block";
-// }
-// var slide = setInterval(carousel, 2000);
-
-
-
-
+//Fonction qui permet d'ajouter une image et son texte en entrant dans les paramètres la source de l'image, son alt et le texte associé
 
 // function addImageAndText(source, alt, text) {
 //
@@ -131,21 +64,4 @@ function currentDiv(n) {
 //   document.getElementsByClassName("slideContainer")[0].appendChild(divElement);
 //   divElement.appendChild(paraElement);
 //   divElement.appendChild(imgElement);
-// }
-
-// addImageAndText("img/jo.jpg", "image jo", "Ceremonie JO");
-
-// var slideIndex = 0;
-// carousel();
-//
-// function carousel() {
-//     var i;
-//     var x = document.getElementsByClassName("mySlides");
-//     for (i = 0; i < x.length; i++) {
-//       x[i].style.display = "none";
-//     }
-//     slideIndex++;
-//     if (slideIndex > x.length) {slideIndex = 1}
-//     x[slideIndex-1].style.display = "block";
-//     setTimeout(carousel, 2000);
 // }
