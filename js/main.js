@@ -1,5 +1,5 @@
 var i;
-var x = document.getElementsByClassName("mySlides");
+var mySlides = document.getElementsByClassName("mySlides");
 var dots = document.getElementsByClassName("circle");
 var slideIndex = 1;
 showDivs(slideIndex);
@@ -11,30 +11,30 @@ function plusDivs(n) {
 
 //Montre ou cache les images du slider
 function showDivs(n) {
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    if (n > mySlides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = mySlides.length} ;
+    for (i = 0; i < mySlides.length; i++) {
+        mySlides[i].style.display = "none";
     }//Gère la boucle de défilement des images et cache les divs mySlides
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace("backgroundWhite", "");
     }//Enlève la classe de colorisation de la puce par défaut
-    x[slideIndex-1].style.display = "block";
+    mySlides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " backgroundWhite";
     //Colore la puce associée à l'image associée
 }
 
 //Gère le défilement automatique du carousel et la colorisation des puces en fonction
 function carousel() {
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+    for (i = 0; i < mySlides.length; i++) {
+      mySlides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace("backgroundWhite", "");
     }
     slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
+    if (slideIndex > mySlides.length) {slideIndex = 1}
+    mySlides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " backgroundWhite";
 }
 
